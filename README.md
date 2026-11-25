@@ -35,6 +35,8 @@ https://github.com/alsergeevich/dsh-rust-fullstack.git#478825e29619482e391226571
 
 In DSH, install with `plugin_manager` action `install_bundle` and that spec as `target`. A repo URL without a commit is accepted for installation but **cannot be updated** by `plugin_manager`; prefer the pinned form.
 
+In the Desktop DSH “Add plugin” dialog, the GitHub URL belongs in **Название или адрес пакета** / **Package name or address**. Open **Реестр** / **Registry** and keep **Официальный реестр npm** / **Official npm registry** selected. Do **not** paste the GitHub URL into the custom registry field: it becomes pnpm's `--registry`, and pnpm then asks that URL for every package (`ERR_PNPM_FETCH_404`).
+
 ### From a local checkout (development)
 
 ```text
@@ -160,6 +162,7 @@ The self-update path expects `skill/skill-index.json` to be committed at the tag
 
 ## Troubleshooting
 
+- **Desktop install fails with `ERR_PNPM_FETCH_404` for `@michengai/…`, `dsh-image-gen`, etc.** — the Add-plugin dialog's **Registry** is set to a custom address containing the GitHub URL. Set **Registry** back to **Official npm registry** (or **Default**), put the GitHub URL only in the package spec field, and retry. This overwrites the remembered registry choice before the next inspection. The package itself has no dependencies; pnpm is asking the GitHub URL for the desktop profile's dependencies because that URL is being used as `--registry`.
 - **Skill not activated** — the request may score below the threshold, or the session may already have an activation. Check `rust_skill_status`; lower `activationThreshold` if needed.
 - **Global skill missing** — `installGlobalSkill` is off, or the profile cannot write `$DSH_HOME`. The bundled copy still activates.
 - **Freshness check fails** — corporate proxy/offline environment. The previous versions are preserved and marked; the skill still works.
