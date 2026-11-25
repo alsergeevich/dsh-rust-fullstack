@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "skillVersion": "0.1.0",
+  "pack": "v0.1.0",
+  "generatedAt": "2026-11-25T12:11:35.022Z",
+  "files": [
+    {
+      "path": "SKILL.md",
+      "bytes": 20130,
+      "sha256": "802dfca34c2d792e922b6ba3e40e82eded486dc35e8f4390ece8f9fd53e69f29"
+    },
+    {
+      "path": "references/antipatterns.md",
+      "bytes": 5927,
+      "sha256": "8dda485a68f7871550819f8b09ce0f5c7bcf64c155024a107541ecde6a24a44c"
+    },
+    {
+      "path": "references/axum.md",
+      "bytes": 4707,
+      "sha256": "a5ed3cb06a5c1db41bcaad0dd8f41a8c2ce750cf4897f6e27619576791ff9b9c"
+    },
+    {
+      "path": "references/checklists.md",
+      "bytes": 4896,
+      "sha256": "095360b80f0bd2ea7a9940b1529a70e6e77b42093a82d200bb41724eb0d8ac08"
+    },
+    {
+      "path": "references/deployment.md",
+      "bytes": 5828,
+      "sha256": "1890786944bde1738b10e68db3e42c5721cd390426b3986cc0418cad6f0eeec1"
+    },
+    {
+      "path": "references/dioxus.md",
+      "bytes": 4547,
+      "sha256": "47d741603c328f8b1b8f17850acaa61665af26100f9c7cfd299ab34403e32b73"
+    },
+    {
+      "path": "references/fullstack-architecture.md",
+      "bytes": 5608,
+      "sha256": "d6fd592d3089a8ec8dc081676791a77a21329105656f032fe440fb0b96b2bac5"
+    },
+    {
+      "path": "references/leptos.md",
+      "bytes": 4877,
+      "sha256": "239cf0d4f4cc7a0c260f679e1e06f8bf6a77b9272c1f89e6849fdaeb553f4ec7"
+    },
+    {
+      "path": "references/observability.md",
+      "bytes": 5501,
+      "sha256": "19e14d9511f9d7d7f918e0ebf59cb91896343661378bad83f3f22fb0d74ddd23"
+    },
+    {
+      "path": "references/postgres.md",
+      "bytes": 5481,
+      "sha256": "5b6d564ac81fa835ebdd95799f42b43f447f02d815d4a3d6d7ef92c41cb745ae"
+    },
+    {
+      "path": "references/rust-core.md",
+      "bytes": 5017,
+      "sha256": "2b045aa5e81e502a9cff3ba25ca4bd4f4553e7d15c37213114072503cb3f8c90"
+    },
+    {
+      "path": "references/security.md",
+      "bytes": 5901,
+      "sha256": "c9aa6f1a8c19e83bc178e7891899b0fe7836b1167bdd116e9a85752258784da6"
+    },
+    {
+      "path": "references/sqlite.md",
+      "bytes": 5613,
+      "sha256": "5ea6618ca8177e7bd2a3c1723ebd8e7d840c1d2141a008ba92887eb6ba6b62e2"
+    },
+    {
+      "path": "references/sqlx.md",
+      "bytes": 4926,
+      "sha256": "71266ac5702c1fc8b71495c15ca8454f364cf7c7f3e9004d67c544976201b660"
+    },
+    {
+      "path": "references/testing.md",
+      "bytes": 5571,
+      "sha256": "d98ea1a4ebc8c989f49b9e51d235b8f0487dfd13908d8ca0886d9c461a47debd"
+    },
+    {
+      "path": "sources.md",
+      "bytes": 5110,
+      "sha256": "79b553809ec9426176896cf4eddf56e17b9ff9807215c789af404cd85a7657a9"
+    }
+  ]
+}

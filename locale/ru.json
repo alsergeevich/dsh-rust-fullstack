@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Rust Fullstack Elite",
+    "description": "Автоматически подключает элитный навык Rust full-stack и поддерживает актуальность знаний по официальной документации.",
+    "detail": "docs/DETAIL.ru.md"
+  }
+}

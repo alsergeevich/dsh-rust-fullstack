@@ -1,0 +1,62 @@
+{
+  "name": "@alsergeevich/dsh-rust-fullstack",
+  "version": "0.1.0",
+  "description": "Elite Rust full-stack skill for DSH with automatic activation, official-docs checks, and self-updating skill packs.",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "lib",
+    "skill",
+    "locale",
+    "docs",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.0-rc.1 <0.3.0-0"
+  },
+  "scripts": {
+    "test": "node --test",
+    "build:index": "node scripts/build-skill-index.mjs",
+    "validate": "node scripts/validate.mjs",
+    "pack:check": "npm pack --dry-run --json",
+    "verify": "npm test && npm run validate && npm run pack:check"
+  },
+  "icon": "icon.svg",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alsergeevich/dsh-rust-fullstack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alsergeevich/dsh-rust-fullstack/issues"
+  },
+  "homepage": "https://github.com/alsergeevich/dsh-rust-fullstack#readme",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "rust",
+    "axum",
+    "leptos",
+    "dioxus",
+    "sqlx",
+    "postgresql",
+    "sqlite",
+    "skill"
+  ]
+}

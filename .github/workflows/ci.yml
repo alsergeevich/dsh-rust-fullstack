@@ -1,0 +1,26 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm install --ignore-scripts --no-audit --no-fund
+      - run: npm test
+      - run: npm run build:index
+      - run: npm run validate
+      - run: npm pack --dry-run --json > /tmp/pack.json
+      - run: node -e "const p=require('/tmp/pack.json')[0]; if(!p.files.some(f=>f.path==='skill/SKILL.md')) process.exit(1); console.log(p.filename, p.files.length, 'files')"

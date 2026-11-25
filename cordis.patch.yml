@@ -1,0 +1,9 @@
+- insert:
+    - id: rust-fullstack
+      name: '@alsergeevich/dsh-rust-fullstack'
+      config:
+        autoActivate: true
+        activationThreshold: 60
+        installGlobalSkill: true
+        autoCheck: daily
+        autoUpdate: skill
