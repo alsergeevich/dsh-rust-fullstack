@@ -2,6 +2,13 @@
 
 All notable changes to `@alsergeevich/dsh-rust-fullstack` are documented here.
 
+## 0.1.1 — 2026-11-25
+
+### Fixed
+
+- Preserve the runtime-updated `versions.json` across plugin reloads. The global installer now only writes a generated freshness file when it is missing or when `force` is used, so a daily check is not silently reset to the bundled baseline.
+- Keep the reported skill version aligned with the installed `SKILL.md` metadata (`0.1.1`).
+
 ## 0.1.0 — 2026-11-25
 
 ### Added

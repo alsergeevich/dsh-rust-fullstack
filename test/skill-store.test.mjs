@@ -46,6 +46,7 @@ test('ensureGlobalSkill installs, preserves user edits, and backs up on force', 
   try {
     await fs.mkdir(path.join(source, 'references'), { recursive: true })
     await fs.writeFile(path.join(source, 'SKILL.md'), SKILL)
+    await fs.writeFile(path.join(source, 'versions.json'), '{"checkedAt":"baseline"}\n')
     await fs.writeFile(path.join(source, 'references', 'rust-core.md'), '# Rust core\n')
     const first = await ensureGlobalSkill({ sourceDir: source, targetDir: target, backupRoot: backups })
     assert.equal(first.ok, true)
@@ -56,14 +57,17 @@ test('ensureGlobalSkill installs, preserves user edits, and backs up on force', 
     assert.equal(manifest.skillPack, 'v0.1.0')
 
     await fs.writeFile(path.join(target, 'SKILL.md'), SKILL.replace('official docs', 'my customized docs'))
+    await fs.writeFile(path.join(target, 'versions.json'), '{"checkedAt":"fresh"}\n')
     const second = await ensureGlobalSkill({ sourceDir: source, targetDir: target, backupRoot: backups })
     assert.ok(second.skippedUserModified.includes('SKILL.md'))
     assert.match(await fs.readFile(path.join(target, 'SKILL.md'), 'utf8'), /my customized docs/)
+    assert.match(await fs.readFile(path.join(target, 'versions.json'), 'utf8'), /fresh/)
 
     const forced = await ensureGlobalSkill({ sourceDir: source, targetDir: target, backupRoot: backups, force: true })
     assert.equal(forced.ok, true)
     assert.ok(forced.backupPath)
     assert.match(await fs.readFile(path.join(target, 'SKILL.md'), 'utf8'), /official docs/)
+    assert.match(await fs.readFile(path.join(target, 'versions.json'), 'utf8'), /baseline/)
     const status = await globalSkillStatus({ targetDir: target })
     assert.equal(status.exists, true)
     assert.equal(status.userModified.length, 0)

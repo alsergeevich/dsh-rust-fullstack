@@ -25,12 +25,12 @@ The skill is bundled with the plugin, installed into the global DSH skills direc
 
 ### From GitHub (recommended for other PCs / Desktop DSH)
 
-Current release: [`v0.1.0`](https://github.com/alsergeevich/dsh-rust-fullstack/releases/tag/v0.1.0) at commit `94e7443f3c319714c492fbd0919ed706b4983783`.
+Current release: [`v0.1.1`](https://github.com/alsergeevich/dsh-rust-fullstack/releases/tag/v0.1.1).
 
 Use a full 40-character commit SHA so the installed artifact is reproducible and updatable:
 
 ```text
-https://github.com/alsergeevich/dsh-rust-fullstack.git#94e7443f3c319714c492fbd0919ed706b4983783
+https://github.com/alsergeevich/dsh-rust-fullstack.git#<40-char-commit>
 ```
 
 In DSH, install with `plugin_manager` action `install_bundle` and that spec as `target`. A repo URL without a commit is accepted for installation but **cannot be updated** by `plugin_manager`; prefer the pinned form.

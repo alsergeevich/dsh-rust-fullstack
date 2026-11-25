@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "skillVersion": "0.1.0",
-  "pack": "v0.1.0",
-  "generatedAt": "2026-11-25T12:11:35.022Z",
+  "skillVersion": "0.1.1",
+  "pack": "v0.1.1",
+  "generatedAt": "2026-11-25T12:20:05.081Z",
   "files": [
     {
       "path": "SKILL.md",
       "bytes": 20130,
-      "sha256": "802dfca34c2d792e922b6ba3e40e82eded486dc35e8f4390ece8f9fd53e69f29"
+      "sha256": "731d5088c5adf66e515ab76d8e359cedd79ab6af6e6cbdefe33a85778749b9dd"
     },
     {
       "path": "references/antipatterns.md",

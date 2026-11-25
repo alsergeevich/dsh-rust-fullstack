@@ -3,8 +3,8 @@ name: rust-fullstack-elite
 description: "Elite Rust full-stack engineering for Axum, Leptos, Dioxus, SQLx, PostgreSQL, and SQLite. Use when writing, reviewing, debugging, or architecting Rust code or a Rust full-stack feature, including Cargo/MSRV decisions, API design, UI state, migrations, security, testing, observability, and production deployment."
 whenToUse: "Rust code, Cargo projects, Axum APIs, Leptos or Dioxus UIs, SQLx/PostgreSQL/SQLite persistence, or any request to build, review, debug, migrate, secure, test, or deploy a Rust full-stack application."
 metadata:
-  version: "0.1.0"
-  pack: "v0.1.0"
+  version: "0.1.1"
+  pack: "v0.1.1"
   baseline: "2026-11-25"
   owner: "alsergeevich"
   plugin: "@alsergeevich/dsh-rust-fullstack"
