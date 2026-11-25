@@ -1,6 +1,6 @@
 {
   "name": "@alsergeevich/dsh-rust-fullstack",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Elite Rust full-stack skill for DSH with automatic activation, official-docs checks, and self-updating skill packs.",
   "license": "MIT",
   "type": "module",

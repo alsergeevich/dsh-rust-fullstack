@@ -25,7 +25,7 @@ The skill is bundled with the plugin, installed into the global DSH skills direc
 
 ### From GitHub (recommended for other PCs / Desktop DSH)
 
-Current release: [`v0.1.1`](https://github.com/alsergeevich/dsh-rust-fullstack/releases/tag/v0.1.1).
+Current release: [`v0.1.2`](https://github.com/alsergeevich/dsh-rust-fullstack/releases/tag/v0.1.2).
 
 Use a full 40-character commit SHA so the installed artifact is reproducible and updatable:
 

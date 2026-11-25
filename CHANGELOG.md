@@ -2,6 +2,12 @@
 
 All notable changes to `@alsergeevich/dsh-rust-fullstack` are documented here.
 
+## 0.1.2 — 2026-11-25
+
+### Fixed
+
+- `rust_skill_status` now prefers the installed `SKILL.md` / manifest version over a stale generated `versions.json`, so an upgraded global skill reports the version that is actually installed.
+
 ## 0.1.1 — 2026-11-25
 
 ### Fixed
